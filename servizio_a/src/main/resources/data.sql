@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS stringa;
+ 
+CREATE TABLE stringa (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  descrizione VARCHAR(250) NOT NULL,
+  data_creazione TIMESTAMP NOT NULL
+);

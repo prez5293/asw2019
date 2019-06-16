@@ -1,0 +1,47 @@
+version: '2'
+services:
+  eureka:
+    build: 
+      context: ./eureka_server
+    container_name: eureka 
+  servizio_c_1:
+    build: 
+      context: ./servizio_c
+    depends_on:
+      - "eureka"
+    environment: 
+      - instance.name=Carlo
+  servizio_c_2:
+    build: 
+      context: ./servizio_c
+    depends_on:
+      - "eureka"
+    environment: 
+      - instance.name=Chiara
+  servizio_a_1:
+    build: 
+      context: ./servizio_a
+    depends_on:
+      - "eureka"
+    environment: 
+      - instance.name=Alberto
+  servizio_a_2:
+    build: 
+      context: ./servizio_a
+    depends_on:
+      - "eureka"
+    environment: 
+      - instance.name=Alice
+  zuul:
+    build: 
+      context: ./zuul_gateway
+    container_name: zuul 
+    ports:
+    - "8080:8080"
+    depends_on:
+      - "eureka"
+
+
+
+
+

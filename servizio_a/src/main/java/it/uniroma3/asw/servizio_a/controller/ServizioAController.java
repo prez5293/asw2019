@@ -10,7 +10,7 @@ import it.uniroma3.asw.servizio_a.feign.AnimalClient;
 import it.uniroma3.asw.servizio_a.service.AnimalService;
 
 @RestController
-@RequestMapping("/servizio-a")
+@RequestMapping("/animals")
 public class ServizioAController {
 	
 	@Autowired

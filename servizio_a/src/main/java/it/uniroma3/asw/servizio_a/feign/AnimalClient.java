@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 @RibbonClient(name="servizioc")
 public interface AnimalClient {
 
-	@GetMapping("/servizio-c")
+	@GetMapping("/animals")
 	public String findAllAnimals();
 	
-	@PostMapping("/servizio-c")
+	@PostMapping("/animals")
 	public String saveAnimal(@RequestBody String string);
 	
 }

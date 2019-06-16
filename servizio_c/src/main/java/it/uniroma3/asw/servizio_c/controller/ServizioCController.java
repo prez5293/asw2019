@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import it.uniroma3.asw.servizio_c.service.AnimalService;
 
 @RestController
-@RequestMapping("/servizio-c")
+@RequestMapping("/animals")
 public class ServizioCController {
 	
 	@Autowired

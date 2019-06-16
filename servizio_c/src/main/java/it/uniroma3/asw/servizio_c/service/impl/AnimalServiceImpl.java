@@ -28,7 +28,7 @@ public class AnimalServiceImpl implements AnimalService {
 		animal.setName(string.split(": ")[1]);
 		animal.setCreatedBy(string.split(": ")[0]);;
 		Animal animalSaved = animalRepository.save(animal);
-		return animalSaved.getCreatedBy() + ": " + animalSaved.getName();
+		return animalSaved.getCreatedBy() + ": " + animalSaved.getName() + " ==> received by " + instance;
 	}
 	
 	public String findAll() {
@@ -41,6 +41,8 @@ public class AnimalServiceImpl implements AnimalService {
 			}
 			string = string.substring(0, string.length() - 2);
 			string += "]";
+		} else {
+			string += "Nessun dato trovato";
 		}
 		return string;
 	}

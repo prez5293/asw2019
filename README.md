@@ -17,6 +17,7 @@ L'applicazione è formata dai seguenti componenti:
 
 Questa applicazione può essere costruita ed eseguita in un ambiente che abbia docker e docker-compose installati.
 Vanno però utilizzate più finestre (terminali) diverse. In genere, una per l'applicazione ed una per i suoi client.  
+Nel file `docker-compose.yml` sono definiti i servizi per il service discovery eureka e il gateway zuul, inoltre sono definite due istanze per il servizio_a e due istanze per il servizio_c
 
 ## Build (Java) 
 
